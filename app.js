@@ -28,6 +28,10 @@ app.post("/feedback", (req, res) => {
   res.status(201).send();
 });
 
+app.get("/", (req, res) => {
+  res.status(201).send("CheckMate");
+});
+
 function sendFeedbackConfirmation(email) {
   const mail = {
     to: email,
