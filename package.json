@@ -1,0 +1,24 @@
+{
+  "name": "checkmate",
+  "version": "1.0.0",
+  "description": "Collection of our team’s projects and journey throughout the four years in college including our achievements, challenges and favorite moments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karimelsayed98/checkMate.git"
+  },
+  "author": "Karim Elsayed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karimelsayed98/checkMate/issues"
+  },
+  "homepage": "https://github.com/Karimelsayed98/checkMate#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
