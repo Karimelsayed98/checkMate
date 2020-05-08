@@ -30,7 +30,7 @@ app.post("/feedback", (req, res) => {
 
 function sendFeedbackConfirmation(email) {
   const mail = {
-    to: "email",
+    to: email,
     from: "checkMate@gmail.com",
     subject: "Checkmate Feedback",
     html:
