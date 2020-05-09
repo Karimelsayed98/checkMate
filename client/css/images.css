@@ -1,0 +1,17 @@
+.slider-image {
+  height: 30vh;
+}
+
+.project-image {
+  height: 25vh;
+}
+
+@media (min-width: 768px) {
+  .slider-image {
+    height: 70vh;
+  }
+
+  .project-image {
+    height: 50vh;
+  }
+}
