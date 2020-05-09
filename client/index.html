@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CheckMate</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
   <link href="./css/home.css" rel="stylesheet" />
   <link href="./css/color.css" rel="stylesheet" />
   <link href="./css/images.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -39,8 +39,8 @@
   <!------ ------->
   <main class="container-fluid p-0" id="fullpage">
     <!--- Image Slider (Carousel) -->
-    <div class="section fp-auto-height">
-      <div class="container-fluid d-flex flex-column p-0">
+    <div class="section">
+      <div class="container-fluid d-flex flex-column p-0 h-100">
         <div id="slides" class="carousel slide" data-ride="carousel">
           <ul class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -91,13 +91,13 @@
               moments
             </p>
           </div>
-          </div>
         </div>
+      </div>
       </div>
     </div>
 
     <!--- Meet the team (Cards) -->
-    <div class="section fp-auto-heigh">
+    <div class="section">
       <div class="container-fluid d-flex flex-column">
         <div class="row text-center">
           <div class="col-12">
@@ -296,30 +296,34 @@
     paddingBottom:"0px",
     autoScrolling:true,
     scrollHorizontally: true,
+    slideSelector: '.slideFP',
     onLeave: function(){
       $('.section [data-aos]').each(function(){
           $(this).removeClass("aos-animate")
       });
-  },
-  onSlideLeave: function(){
-      $('.slide [data-aos]').each(function(){
-          $(this).removeClass("aos-animate")
-      });
-  },
-  afterSlideLoad: function(){
-      $('.slide.active [data-aos]').each(function(){
-          $(this).addClass("aos-animate")
-      });
-  },
-  afterLoad: function(){
-      $('.section.active [data-aos]').each(function(){
-          $(this).addClass("aos-animate")
-      });
-  }
+    },
+    onSlideLeave: function(){
+        $('.slide [data-aos]').each(function(){
+            $(this).removeClass("aos-animate")
+        });
+    },
+    afterSlideLoad: function(){
+        $('.slide.active [data-aos]').each(function(){
+            $(this).addClass("aos-animate")
+        });
+    },
+    afterLoad: function(){
+        $('.section.active [data-aos]').each(function(){
+            $(this).addClass("aos-animate")
+        });
+    }
   });
 
     }
 
+    const footerHeight = $('.footer').outerHeight();
+    $('.footer').css('bottom', `${footerHeight - 40}px`);
+    console.log();
 
   AOS.init();
   </script>

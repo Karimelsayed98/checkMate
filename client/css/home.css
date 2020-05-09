@@ -10,6 +10,5 @@
 @media (min-width: 768px) {
   .footer {
     position: absolute;
-    top: 86vh;
   }
 }
