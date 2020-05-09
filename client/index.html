@@ -40,7 +40,7 @@
   <main class="container-fluid p-0" id="fullpage">
     <!--- Image Slider (Carousel) -->
     <div class="section">
-      <div class="container-fluid d-flex flex-column p-0">
+      <div class="container-fluid d-flex flex-column p-0 h-100">
         <div id="slides" class="carousel slide" data-ride="carousel">
           <ul class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -206,15 +206,15 @@
           </div>
         </div>
         <!--- Footer -->
-        <footer class="container-fluid d-flex font-small footer bg-checkmate py-3 py-md-4 px-2 px-md-5">
-          <p class="text-light flex-grow-1">
-            © 2020 Copyright: CheckMate
-          </p>
-          <button class="btn btn-outline-light btn-rounded" data-toggle="modal" data-target="#modalFeedbackForm">
-            Send us your Feedback
-          </button>
-        </footer>
       </div>
+      <footer class="w-100 d-flex footer bg-checkmate px-2 px-md-5">
+        <p class="text-light flex-grow-1 m-0">
+          © 2020 Copyright: CheckMate
+        </p>
+        <button class="btn btn-outline-light btn-rounded" data-toggle="modal" data-target="#modalFeedbackForm">
+          Send us your Feedback
+        </button>
+      </footer>
     </div>  
   </main>
   
@@ -321,9 +321,8 @@
 
     }
 
-    const footerHeight = $('.footer').outerHeight();
-    $('.footer').css('bottom', `${footerHeight - 40}px`);
-    console.log();
+    const footerHeight = $('.footer').height();
+    $('.footer').css('bottom', `${footerHeight}px`);
 
   AOS.init();
   </script>

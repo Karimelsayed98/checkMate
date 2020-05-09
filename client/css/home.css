@@ -7,8 +7,25 @@
     radial-gradient(#d7d7d7 1px, transparent 1px);
 }
 
+.footer {
+  height: 100px;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .footer {
+    flex-direction: row;
     position: absolute;
+    bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 100px;
+    align-items: center;
   }
 }
